@@ -24,7 +24,6 @@ def contains_char(word: str, letter: str) -> None:
     count: int = 0
     # On line 24, a local variable counts how many of the  if statements are true.
     # On line 24, I forgot that you can edit local variables.
-
     if word[0] == letter:
         print(letter + " found at index 0")
         count = count + 1
@@ -42,8 +41,10 @@ def contains_char(word: str, letter: str) -> None:
         count = count + 1
     if count == 0:
         print("No instances of " + letter + " found in " + word)
-    if count > 0:
-        print(str(count) + " intances of " + letter + " found in " + word)
+    elif count == 1:
+        print("1 instance of " + letter + " found in " + word)
+    else:
+        print(str(count) + " instances of " + letter + " found in " + word)
         # On line 45, I am printing the number of times the letter shows up in the word.
         # On line 45, I forgot to make the local variable, count, a string.
 
