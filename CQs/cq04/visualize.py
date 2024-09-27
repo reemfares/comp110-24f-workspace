@@ -8,5 +8,5 @@ __author__ = 730738053
 x: str = "123"
 y: str = "abc"
 
-print(concat(x, y))  # calling concat from concatenation
-print(get_coords(x, y))  # calling get_coords from coordinates
+concat(x, y)  # calling concat from concatenation
+get_coords(x, y)  # calling get_coords from coordinates
