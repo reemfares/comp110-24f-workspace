@@ -7,7 +7,7 @@ def input_guess(secret_word_len: int) -> str:
     """Prompting a guess for the secret word."""
     word: str = input(f"Enter a {secret_word_len} character word: ")
     while len(word) != secret_word_len:
-        word: str = input(f"That wasn't {secret_word_len} chars! Try again: ")
+        word = input(f"That wasn't {secret_word_len} chars! Try again: ")
     return word
 
 
@@ -18,9 +18,7 @@ def contains_char(secret_word: str, char_guess: str) -> bool:
     match: bool = False
     while index < len(secret_word):
         if secret_word[index] == char_guess:
-            match: bool = (
-                True  # The return value is changed to true if there is a match.
-            )
+            match = True  # The return value is changed to true if there is a match.
         index += 1
     return match
 
