@@ -29,12 +29,15 @@ def max(input: list[int]) -> int:
 def is_equal(list_a: list[int], list_b: list[int]) -> bool:
     """Checking if the lists have the same number in the same order."""
     idx: int = 0
-    while (idx < len(list_a)) and (idx < len(list_b)):  # Exits when both lists end.
-        if list_a[idx] != list_b[idx]:
-            return False  # The function will be exited if the lists are unequal.
-        else:
-            idx += 1
-    return True
+    count: int = 0
+    while (idx < len(list_a)) and (idx < len(list_b)):
+        if list_a[idx] == list_b[idx]:
+            count += 1  # Keeps track of number of matches.
+        idx += 1
+    if count == len(list_a) and count == len(list_b):
+        return True
+    else:
+        return False
 
 
 def extend(list_1: list[int], list_2: list[int]) -> None:
