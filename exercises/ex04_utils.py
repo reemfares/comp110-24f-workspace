@@ -6,11 +6,15 @@ __author__ = "730738053"
 def all(list: list[int], integer: int) -> bool:
     """Checking if the integer is the same as all the number in the list."""
     idx: int = 0
+    count: int = 0
     while idx < len(list):
-        if integer != list[idx]:
-            return False  # The function will be exited if found to be false.
+        if integer == list[idx]:
+            count += 1  # Counts the times the integer appears in the list.
         idx += 1  # Iterate through every item in the list.
-    return True
+    if count == len(list) and len(list) > 0:  # Ensures that every item equals integer.
+        return True
+    else:
+        return False
 
 
 def max(input: list[int]) -> int:
