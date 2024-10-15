@@ -39,9 +39,10 @@ def test_sub_use_case_2() -> None:
 
 
 def test_add_at_index_edge_case() -> None:
-    """This function doesn't have a return value."""
-    list = [1, 3, 4]
-    assert add_at_index(list, 2, 1) == None
+    """Adds to an empty list"""
+    list = []
+    add_at_index(list, 10, 0)
+    assert list == [10]
 
 
 def test_add_at_index_use_case_1() -> None:
