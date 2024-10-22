@@ -1,4 +1,5 @@
 from exercises.ex05.utils import only_evens, sub, add_at_index
+import pytest
 
 """Defining unit tests for lists"""
 
@@ -39,10 +40,9 @@ def test_sub_use_case_2() -> None:
 
 
 def test_add_at_index_edge_case() -> None:
-    """Adds to an empty list"""
-    list = []
-    add_at_index(list, 10, 0)
-    assert list == [10]
+    """An index error is raised when there is an invalid index."""
+    with pytest.raises(IndexError):
+        add_at_index([], 5, 6)
 
 
 def test_add_at_index_use_case_1() -> None:
